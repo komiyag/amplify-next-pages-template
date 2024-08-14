@@ -31,7 +31,6 @@ cfnUserPool.userPoolAddOns = {
 };
 
 const { cfnUserPoolRiskConfigurationAttachment } = backend.auth.resources.cfnResources;
-cfnUserPoolRiskConfigurationAttachment.addDependsOn(cfnUserPool);
 cfnUserPoolRiskConfigurationAttachment.riskExceptionConfiguration = {
   blockedIpRangeList: ['27.0.3.144/28'],
 };

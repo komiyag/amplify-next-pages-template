@@ -26,3 +26,10 @@ backend.auth.resources.cfnResources.cfnUserPool.addPropertyOverride(
     }
   }
 );
+
+backend.auth.resources.cfnResources.cfnUserPool.addPropertyOverride(
+  'userPoolAddOns',
+  {
+    advancedSecurityMode: 'ENFORCED'
+  }
+);

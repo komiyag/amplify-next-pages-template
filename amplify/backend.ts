@@ -17,12 +17,12 @@ const { cfnUserPool } = backend.auth.resources.cfnResources;
 // modify cfnUserPool policies directly
 cfnUserPool.policies = {
   passwordPolicy: {
-    minimumLength: 10,
+    minimumLength: 6,
     requireLowercase: true,
     requireNumbers: true,
     requireSymbols: true,
     requireUppercase: true,
-    temporaryPasswordValidityDays: 20,
+    temporaryPasswordValidityDays: 10,
   },
 };
 
@@ -30,11 +30,11 @@ cfnUserPool.userPoolAddOns = {
   advancedSecurityMode: 'ENFORCED',
 };
 
-const { cfnUserPoolRiskConfigurationAttachment } = backend.auth.resources.cfnResources;
-cfnUserPoolRiskConfigurationAttachment.riskExceptionConfiguration = {
-  skippedIpRangeList: [''],
-  blockedIpRangeList: ['27.0.3.144/28'],
-};
+// const { cfnUserPoolRiskConfigurationAttachment } = backend.auth.resources.cfnResources;
+// cfnUserPoolRiskConfigurationAttachment.riskExceptionConfiguration = {
+//   skippedIpRangeList: [''],
+//   blockedIpRangeList: ['27.0.3.144/28'],
+// };
 
 // const { cfnUserPoolRiskConfigurationAttachment } = backend.auth.resources.cfnResources;
 // cfnUserPoolRiskConfigurationAttachment.addDependsOn(cfnUserPool);

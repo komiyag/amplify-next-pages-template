@@ -17,7 +17,7 @@ backend.auth.resources.cfnResources.cfnUserPool.addPropertyOverride(
   'Policies',
   {
     PasswordPolicy: {
-      MinimumLength: 10,
+      MinimumLength: 8,
       RequireLowercase: true,
       RequireNumbers: true,
       RequireSymbols: true,

@@ -30,10 +30,10 @@ cfnUserPool.userPoolAddOns = {
   advancedSecurityMode: 'ENFORCED',
 };
 
-const { cfnUserPoolRiskConfigurationAttachment } = backend.auth.resources.cfnResources;
-cfnUserPoolRiskConfigurationAttachment.riskExceptionConfiguration = {
-  blockedIpRangeList: ['27.0.3.144/28'],
-};
+// const { cfnUserPoolRiskConfigurationAttachment } = backend.auth.resources.cfnResources;
+// cfnUserPoolRiskConfigurationAttachment.riskExceptionConfiguration = {
+//   blockedIpRangeList: ['27.0.3.144/28'],
+// };
 
 // const { cfnUserPoolRiskConfigurationAttachment } = backend.auth.resources.cfnResources;
 // cfnUserPoolRiskConfigurationAttachment.addDependsOn(cfnUserPool);
